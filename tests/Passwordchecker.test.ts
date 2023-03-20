@@ -63,7 +63,7 @@ describe("passwordChecker", () => {
 		"_",
 		"¿",
 		"¡",
-	])(`checks that is valid with a special character`, (char: string) => {
+	])("checks that is valid with a special character" + ".add(%s)", (char: string) => {
 		const password = `ASjm${char}HJSK2L`;
 
 		const check = passwordChecker(password);

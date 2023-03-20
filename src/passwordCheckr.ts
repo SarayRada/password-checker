@@ -14,11 +14,8 @@ export const passwordChecker = (password: string): boolean => {
 	if (!/[0-9]/.test(password)) {
 		return false;
 	}
-	if (
-		!/["]"||"{"||"}"||":"||'"'||"'"||"?"||"!"||"*"||"="||"+"||"-"||"_"||"¿"||"¡"||";"||"("||")"||"["]/.test(
-			password
-		)
-	) {
+	const specialCharacters = /[;()\\[\]{}:"'?!*=+-_¿¡]/;
+	if (!specialCharacters.test(password)) {
 		return false;
 	}
 
