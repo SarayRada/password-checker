@@ -43,5 +43,11 @@ describe("passwordChecker", () => {
 
         expect(check).toBeFalsy();
     });
-    
+    it("checks that isn't valid without a special character", () => {
+        const password = "ASjmHJSK2L";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
 });
