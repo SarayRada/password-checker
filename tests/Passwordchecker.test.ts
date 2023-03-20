@@ -1,7 +1,7 @@
 import { passwordChecker } from "../src/passwordCheckr";
 
 describe("passwordChecker", () => {
-    it("check that is a valid password", () => {
+    it("checks that is a valid password", () => {
         const password = "As8;hjskdL";
 
         const check = passwordChecker(password);
@@ -9,7 +9,7 @@ describe("passwordChecker", () => {
         expect(check).toBeTruthy();
     });
 
-    it("check that isn't valid with less than 8 characters", () => {
+    it("checks that isn't valid with less than 8 characters", () => {
         const password = "As8;hjs";
 
         const check = passwordChecker(password);
