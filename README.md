@@ -6,3 +6,5 @@
 4. It should contain at least 1 lower case letter.
 5. It should contain at least 1 number.
 6. It should contain a special character `;()[]{}:"'?!*=+-_¿¡`
+
+This was an exercises to try TDD: red, green, refactor
