@@ -8,4 +8,12 @@ describe("passwordChecker", () => {
 
         expect(check).toBeTruthy();
     });
+
+    it("check that isn't valid with less than 8 characters", () => {
+        const password = "As8;hjs";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
 });

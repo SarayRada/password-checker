@@ -1,3 +1,3 @@
 export const passwordChecker = (password: string): boolean => {
-    return true;
+    return password.length >= 8;
 };
