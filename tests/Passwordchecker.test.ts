@@ -8,7 +8,6 @@ describe("passwordChecker", () => {
 
         expect(check).toBeTruthy();
     });
-
     it("checks that isn't valid with less than 8 characters", () => {
         const password = "As8;hjs";
 
@@ -16,4 +15,26 @@ describe("passwordChecker", () => {
 
         expect(check).toBeFalsy();
     });
+    it("checks that isn't valid with more than 20 characters", () => {
+        const password = "As8;hjsAs8;hjsAs8;hjs";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
+    it("checks that isn't valid without upperCase", () => {
+        const password = "as8;hjskdl";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
+    it("checks that isn't valid without lowerCase", () => {
+        const password = "AS8;HJSKDL";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
+    
 });
