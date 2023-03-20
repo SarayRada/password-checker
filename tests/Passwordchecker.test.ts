@@ -36,5 +36,12 @@ describe("passwordChecker", () => {
 
         expect(check).toBeFalsy();
     });
+    it("checks that isn't valid without a number", () => {
+        const password = "ASj;HJSKDL";
+
+        const check = passwordChecker(password);
+
+        expect(check).toBeFalsy();
+    });
     
 });
